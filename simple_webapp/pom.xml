@@ -4,7 +4,7 @@
   <groupId>org.sonatype.mavenbook</groupId>
   <artifactId>simple_webapp</artifactId>
   <packaging>war</packaging>
-  <version>1.0</version>
+  <version>1.0-SNAPSHORT</version>
   <name>simple_webapp Maven Webapp</name>
   <url>http://maven.apache.org</url>
   
@@ -13,16 +13,7 @@
         <developerConnection>scm:git:https://github.com/nikhil5225/test.git</developerConnection>
     </scm>
 	
-	<build>
-    <plugins>
-      <plugin>
-        <groupId>org.apache.maven.plugins</groupId>
-        <artifactId>maven-release-plugin</artifactId>
-        <version>2.5.3</version>
-      </plugin>
-    </plugins>
-  </build>
-
+	
   <distributionManagement>
     <repository>
     <id>releases</id>
@@ -33,6 +24,7 @@
     <url>http://192.168.230.128:8080/nexus-2.14.8-01/content/repositories/snapshots</url>
     </snapshotRepository>
   </distributionManagement>
+  
   <dependencies>
     <dependency>
       <groupId>junit</groupId>
@@ -43,5 +35,12 @@
   </dependencies>
   <build>
     <finalName>simple_webapp</finalName>
+	  <plugins>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-release-plugin</artifactId>
+        <version>2.5.3</version>
+      </plugin>
+    </plugins>
   </build>
 </project>
